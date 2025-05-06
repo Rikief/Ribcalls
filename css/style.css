@@ -1,0 +1,740 @@
+:root {
+  --primary: #4d3276;
+  --bg: #da4b6e;
+}
+
+* {
+  font-family: 'poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: #fff;
+  /* min-height: 2000px; */
+}
+
+/*navbar*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(77, 50, 118, 0.8);
+  border-bottom: 1px solid #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.logo-img {
+  height: 40px;
+  margin-right: 8px;
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--bg);
+}
+
+.navbar .navbar-nav a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--bg);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--bg);
+}
+
+#menu {
+  display: none;
+
+}
+
+/* navbar end */
+
+
+/* hero slide 1 */
+
+.hero-slider {
+  min-height: 100vh;
+}
+
+.swiper-slide {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ganti gamabar di slide */
+
+.slide-1 {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('../asset/img/bg1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.slide-2 {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('../asset/img/foto2.avif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide-3 {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('../asset/img/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide-4 {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('../asset/img/bg1.avif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide-5 {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('../asset/img/Ribcalls.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide-6 {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('../asset/img/foto3.avif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* akhir slide ganti foto */
+
+.swiper-slide::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(218, 75, 113, 1) 3%, rgba(255, 255, 255, 0) 50%);
+}
+
+.content {
+  padding: 11rem 7%;
+  max-width: 60rem;
+}
+
+.content h1 {
+  font-size: 5rem;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.content p {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 100;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  /* mix-blend-mode: difference; */
+}
+
+.cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: rgba(1, 1, 3, 0.5);
+}
+
+/* hero tombol */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  z-index: 2;
+  border-radius: 5px;
+}
+
+.nav-btn.prev {
+  left: 20px;
+}
+
+.nav-btn.next {
+  right: 20px;
+}
+
+.nav-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* akhir hero */
+
+/* about section*/
+.about {
+  padding: 8rem 7% 1.4rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.about .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* tetap tengah */
+  justify-content: center;
+  gap: 2rem;
+  margin-top: -30px;
+  /* naikkan semuanya 50px */
+}
+
+.about .row .about-img {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .row .about-img img {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 1rem;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+  color: white;
+  /* ini bikin semua tulisan di content putih */
+}
+
+.about .row .content h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.about .row .content h3 span.highlight {
+  color: #4d3276;
+  /* tetap ungu untuk "it's me, Ribka" */
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.6;
+  color: white;
+}
+
+/* akhir about */
+
+/* foto foto slide */
+.hero-slider-2 {
+  min-height: 100vh;
+}
+
+.hero-slider-2 .swiper-slide {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ganti background slide 2 */
+.slide-1b {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('../asset/img/bg1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.slide-2b {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('../asset/img/foto2.avif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide-3b {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('../asset/img/Ribka1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.content-2 {
+  height: 100%;
+  width: 100%;
+  /* Pastikan full width */
+  background: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.content-2 h1 {
+  margin-top: 25vh;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.content-2 p {
+  font-size: 1.6rem;
+  margin-top: 10vh;
+  color: #eee;
+}
+
+.hero-slider-2 .cta {
+  margin-bottom: 25vh;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+}
+
+/* foto foto slide */
+
+
+/* Footer section */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0 0;
+  margin-top: 3rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 30px;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+
+/* footer bawah */
+.footer-bottom {
+  border-top: 1px solid var(--bg);
+  background-color: var(--primary);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 20px;
+  z-index: 100;
+}
+
+.footer-bottom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.footer-icons a {
+  margin-left: 15px;
+  font-size: 1.4rem;
+  color: #000;
+  transition: color 0.3s;
+}
+
+.footer-icons a:hover {
+  color: #666;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  color: #000;
+}
+
+/* end footer */
+
+
+
+/* Halaman Live Update */
+/* live update */
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 8rem 7% 1.4rem;
+}
+
+.live-item {
+  display: flex;
+  align-items: center;
+  background: #bfbfbf;
+  border-radius: 12px;
+  padding: 10px;
+  margin: 10px;
+  width: 45%;
+  min-width: 300px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.platform-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.live-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #000;
+}
+
+/* Live Update */
+
+/* pignation */
+#pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#pagination button {
+  padding: 8px 14px;
+  background-color: #6a0dad;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  transition: background-color 0.3s;
+}
+
+#pagination button:hover {
+  background-color: #8a2be2;
+}
+
+#pagination button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+#pagination .active-page {
+  background-color: #ff6600;
+}
+
+/* pignation */
+
+/* end halaman Live update */
+
+
+
+
+
+/*media queris (cari responsive break point)*/
+
+/*laptop*/
+@media (max-width: 1920px) {
+  html {
+    font-size: 100%;
+  }
+
+}
+
+/*tablet*/
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 50vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+    align-items: center;
+    /* biar kontennya tengah */
+    margin-bottom: 45px;
+  }
+
+  .about .row .about-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    /* tambahan: jarak atas */
+  }
+
+  .about .row .about-img img {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1 / 1;
+    /* tambahan: biar kotak */
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 1rem;
+    /* biar sudut foto tetap rounded */
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .content p {
+    font-size: 1.6rem;
+  }
+
+  /* foto foto slide */
+  .hero-slider-2,
+  .hero-slider-2 .swiper-slide,
+  .slide-1b,
+  .slide-2b,
+  .slide-3b {
+    min-height: 50vh !important;
+    height: 50vh !important;
+  }
+
+  .content-2 {
+    height: 100%;
+    width: 100%;
+    /* Pastikan full width */
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    border-radius: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .content-2 h1 {
+    margin-top: 20vh;
+    font-size: 2.4rem;
+    color: #fff;
+  }
+
+  .content-2 p {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    color: #eee;
+  }
+
+  .hero-slider-2 .cta {
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  padding: 1rem 1.3rem;
+    font-size: 1.4rem;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    color: #fff;
+  }
+  /* foto foto slide */
+
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+    /* tetap 3 kolom */
+    gap: 15px;
+  }
+
+  .footer-section h4 {
+    font-size: 0.9rem;
+  }
+
+  .footer-section ul li a {
+    font-size: 0.85rem;
+  }
+
+  /* footer bawah */
+
+  .footer-bottom-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .footer-icons a {
+    margin: 0 10px;
+    font-size: 1.3rem;
+  }
+
+  .footer-copy {
+    font-size: 0.85rem;
+  }
+
+
+}
+
+
+/*mobile phone*/
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
